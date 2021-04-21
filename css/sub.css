@@ -1,0 +1,150 @@
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dir-col{
+    flex-direction: column;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-center{
+    justify-content: center;
+}
+.align{
+    align-items: center;
+}
+.container{
+    width: 100%;
+    padding: 0 4rem;
+    margin: 0 auto;
+}
+.flex{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.flex__1{
+    flex: 0 0 21%;
+    max-width: 21%;
+}
+.flex__2{
+    flex: 0 0 28%;
+    max-width: 28%;
+}
+.flex__3{
+    flex: 0 0 48%;
+    max-width: 48%;
+}
+.flex__4{
+    flex: 0 0 22%;
+    max-width: 22%;
+}
+.btn, .btn1{
+    color: var(--light-sky);
+    background-color: var(--primay);
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8rem 2.8rem;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+    border: 1px solid;
+}
+.btn1{
+    background-color: var(--light-sky);
+    color: var(--primay);
+}
+.btn:hover{
+    border-color: var(--primay);
+    color: var(--primay);
+    background-color: transparent;
+}
+.btn1:hover{
+    border-color: var(--light-sky);
+    color: var(--light-sky);
+    background-color: var(--primay);
+}
+.layout-padding{
+    padding: 3.5rem 0;
+}
+
+.layout-style h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+.layout-style p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.footer-heading{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+@media screen and (max-width:992px) {
+    .container{
+        padding: 0 2rem;
+    }
+    .flex__2{
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+    .flex__4{
+    flex: 0 0 46%;
+    max-width: 46%;
+    }
+}
+@media screen and (max-width:768px) {
+    .container{
+        padding: 0 1.5rem;
+    }
+    .flex, .flex__1,.flex__3{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .layout-padding {
+        padding: 2.5rem 0;
+    }
+    .container{
+        padding: 0 2rem;
+    }
+}
+@media screen and (max-width:576px) {
+    .container{
+        padding: 0 0.8rem;
+    }
+    .layout-padding {
+        padding: 1.5rem 0;
+    }
+    .layout-style h2 {
+        font-size: 2rem;
+    }
+    .flex__2,
+    .flex__4{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .footer-heading{
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:350px){
+    .container{
+        padding: 0 0.4rem;
+    }
+    .layout-padding {
+        padding: 1.5rem 0;
+    }
+    .layout-style h2 {
+        font-size: 1.4rem;
+    }
+    .layout-style p {
+        font-size: 1rem;
+    }
+}

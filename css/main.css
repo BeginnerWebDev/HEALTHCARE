@@ -1,0 +1,777 @@
+/* sub Css file */
+@import url(./sub.css);
+
+/* Colors */
+:root {
+  --light-sky: #62d2a2;
+  --dark-sky: #178066;
+  --primay: #fff;
+  --secondary: #000;
+}
+/* Colors */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito", sans-serif;
+}
+/* Start Header SEction */
+header {
+  position: relative;
+}
+.background-header{
+  position: relative;
+}
+.background-header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../images/hero-bg.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+  background-position: center bottom;
+  padding-bottom: 2rem;
+}
+/* End Header SEction */
+
+/* Start Nav SEction */
+nav {
+  padding: 1.5rem 0;
+}
+.nav-bg{
+  background: var(--dark-sky);
+}
+nav .logo a {
+  text-decoration: none;
+  color: var(--primay);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.nav-link {
+  list-style-type: none;
+}
+.nav-link li {
+  margin: 0 1rem;
+}
+.nav-link li a {
+  color: var(--primay);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.nav-link li a:hover {
+  color: var(--light-sky);
+}
+.burger {
+  display: none;
+}
+.burger div {
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  background-color: var(--primay);
+  border-radius: 6px;
+}
+/* End Nav SEction */
+
+/* Start Hero SEction */
+.hero {
+  color: var(--primay);
+  padding: 2rem 0 0rem;
+  position: relative;
+}
+
+.hero-content h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 1.5rem 0;
+}
+.hero-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.hero-content .btn-hero {
+  margin-bottom: 3.5rem;
+}
+.hero .swiper-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+.hero .swiper-container .swiper-pagination {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primay);
+  outline: none;
+}
+.hero .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  width: 20px !important;
+  height: 20px !important;
+}
+/* End Hero SEction */
+
+/* Derpartments Section Start*/
+.departments {
+  padding-top: 5rem;
+}
+.department-heading {
+  text-align: center;
+}
+.derpartments-content {
+  text-align: center;
+}
+.derpartments-lists {
+  margin: 3.5rem 0 4rem;
+}
+.derpartments-list {
+  margin-left: 1.5rem;
+}
+.derpartments-list .img-bx {
+  width: 100px;
+  height: 100px;
+  background-color: var(--light-sky);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.derpartments-list .img-bx img {
+  width: 50px;
+}
+.derpartments-list .details {
+  text-align: center;
+}
+.derpartments-list .details h3 {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+.derpartments-list .details p {
+  font-weight: 600;
+}
+/* Derpartments Section End*/
+
+/* About Section Start*/
+.about-imgbx img {
+  max-width: 100%;
+  border-radius: 15px;
+  height: 100%;
+  object-fit: cover;
+}
+.about_us-content {
+  padding-left: 2rem;
+}
+.about_us-content h2 {
+  font-size: 2rem;
+}
+.about_us-content p {
+  margin-bottom: 2rem;
+}
+/* About Section ENd*/
+
+/* Our Doctors Section Start */
+.doctors {
+  background: var(--dark-sky);
+  color: var(--primay);
+}
+.doctors-heading {
+  text-align: center;
+}
+.doctors-heading p {
+  padding: 0 6rem 2rem;
+}
+.doctors_list {
+  margin-right: 1.5rem;
+  border-radius: 15px;
+  background-color: var(--primay);
+}
+.doctors_list .img_bx {
+  max-width: 100%;
+}
+.doctors_list .img_bx img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.doctors_list .details {
+  color: var(--secondary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.doctors_list .details .doctors-contact {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primay);
+  border-radius: 10px;
+  z-index: 2;
+  padding: 0.5rem 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.doctors_list .details .doctors-contact a {
+  text-decoration: none;
+  color: var(--light-sky);
+  transition: 0.3s;
+  display: inline-block;
+  padding: 0 0.3rem;
+  border-right: 1px solid var(--secondary);
+}
+.doctors_list .details .doctors-contact a:nth-child(4) {
+  border-right: none;
+}
+.doctors_list:hover .details .doctors-contact {
+  top: -33%;
+  opacity: 1;
+}
+.doctors_list .details .doctors-contact a:hover {
+  color: var(--dark-sky);
+}
+.doc-btn {
+  margin-top: 3rem;
+  text-align: center;
+}
+.btn-doc {
+  border-color: transparent;
+}
+/* Our Doctors Section End */
+
+/*Contact Section Start*/
+.contact-heading {
+  padding-bottom: 1rem;
+}
+.form-ctrl {
+  margin-bottom: 1.5rem;
+}
+.form-ctrl .input-group {
+  height: 8vh;
+  padding-left: 0.5rem;
+  outline: none;
+  border: none;
+  background: #eeeeee;
+  font-size: 0.9rem;
+}
+.form-ctrl .h-width {
+  width: 43.6%;
+  margin-right: 0.8rem;
+  display: inline-block;
+}
+.form-ctrl .h-width:nth-child(2) {
+  margin-right: 0;
+}
+.form-ctrl .f-width {
+  width: 90%;
+}
+.form-ctrl .f-height {
+  height: 175px;
+}
+.submit-btn {
+  display: block;
+  width: 90%;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem 0;
+  outline: none;
+}
+.map-container {
+  height: 368px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+.map-container .map {
+  height: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.map-container .map #googleMap {
+  height: 100%;
+}
+/*Contact Section End*/
+
+/* Testimonial section Start */
+.testimonial-heading {
+  text-align: center;
+}
+.client {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.client .client-imgbx {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 1.5rem;
+}
+.client .client-imgbx img {
+  width: 100%;
+  border-radius: 50%;
+}
+.client .client-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.client .client-details h3 {
+  color: var(--light-sky);
+  margin-bottom: 1rem;
+}
+.client .client-details p {
+  padding: 0 9rem;
+}
+.client .client-details span {
+  display: inline-block;
+  margin-bottom: 4rem;
+}
+.swiper2 .swiper-button-prev,
+.swiper2 .swiper-button-next {
+  width: 45px !important;
+  height: 45px !important;
+  background-color: var(--light-sky);
+  color: var(--primay);
+  top: unset !important;
+  bottom: 0 !important;
+  outline: none;
+  opacity: 0.8;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.swiper2 .swiper-button-prev:hover,
+.swiper2 .swiper-button-next:hover {
+  opacity: 1;
+}
+.swiper2 .swiper-button-prev {
+  left: 47%;
+  transform: translateX(-50%);
+}
+.swiper2 .swiper-button-next {
+  left: 53%;
+  transform: translateX(-50%);
+}
+.swiper2 .swiper-button-next:after,
+.swiper2 .swiper-button-prev:after {
+  font-size: 1.6rem !important;
+}
+/* Testimonial section Start */
+
+/* Footer Section Start */
+footer {
+  background-color: var(--dark-sky);
+  color: var(--primay);
+  padding: 4rem 0 2rem;
+}
+footer .container{
+  padding-bottom: 3rem;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li a {
+  color: var(--primay);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+footer ul li a:hover {
+  color: var(--light-sky);
+}
+.reach .location ul li {
+  margin: 0.8rem 0;
+}
+.reach .social ul {
+  flex-wrap: nowrap;
+}
+.reach .social ul li {
+  margin: 0.5rem 0.6rem 0 0;
+}
+.reach .social ul li a {
+  font-size: 1.3rem;
+}
+.footer-links a {
+  text-decoration: none;
+  color: var(--primay);
+  transition: 0.3s;
+  display: inline-block;
+}
+.footer-links a:hover {
+  color: var(--light-sky);
+}
+.footer-links .f-link {
+  margin: 1rem 0;
+}
+.footer-links .h-link a:nth-child(2) {
+  margin-left: 0.8rem;
+}
+.suscribe-input {
+  width: 100%;
+  height: 6vh;
+  outline: none;
+  border: none;
+  padding-left: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.suscribe-btn {
+  display: inline-block;
+  width: 100%;
+  height: 6vh;
+  margin-top: 0.5rem;
+  outline: none;
+  border: 1px solid var(--light-sky);
+  background: var(--light-sky);
+  color: var(--primay);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  font-size: 1rem;
+}
+.suscribe-btn:hover {
+  background: transparent;
+  color: var(--light-sky);
+}
+footer .creadit{
+  text-align: center;
+}
+footer .creadit a{
+  color: var(--primay);
+  text-decoration: none;
+}
+/* Footer Section End */
+
+
+/* -- MEDIA QUERY -- */
+@media screen and (max-width: 992px) {
+  /* Start Header SEction */
+  .background-header::before {
+    background-position: top right;
+    background-size: cover;
+  }
+  /* Start Header SEction */
+
+  /* Start Nav SEction */
+  .nav-active {
+    margin-bottom: 16rem;
+  }
+  .nav-link {
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .active-dropdown {
+    top: 10vh;
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu ul li {
+    margin: 0.7rem 0;
+  }
+  .burger {
+    cursor: pointer;
+    display: block;
+  }
+  .active-burger {
+    transform: rotate(360deg);
+  }
+  .toggle .line1 {
+    transform: rotate(45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(-45deg) translate(5px, -16px);
+  }
+  /* End Nav SEction */
+
+  /* Start Hero SEction */
+  .hero-content .btn-hero {
+    margin-bottom: 1.5rem;
+  }
+  /* Start Hero SEction */
+
+  /* About Section Start*/
+  .about_us-content p {
+    margin-bottom: 0.5rem;
+  }
+  /* About Section End*/
+
+  /* Our Doctors Section Start */
+  .doctors-lists {
+    justify-content: center;
+  }
+  .doctors_list:nth-child(3) {
+    margin-top: 1.5rem;
+  }
+  .doctors-heading p {
+    padding: 0 2rem 2rem;
+  }
+  /* Our Doctors Section End */
+
+  /* Testimonial section Start */
+  .client .client-details p {
+    padding: 0 5rem;
+  }
+  .swiper2 .swiper-button-prev {
+    left: 45%;
+  }
+  .swiper2 .swiper-button-next {
+    left: 55%;
+  }
+  /* Testimonial section Start */
+
+  /* Footer Section Start */
+  footer .container {
+    justify-content: center;
+  }
+  .reach,
+  .footer-about {
+    margin-bottom: 2rem;
+  }
+
+  .footer-links .f-link {
+    margin: 1rem 0;
+  }
+  .footer-links .h-link a:nth-child(2) {
+    margin-left: 0.6rem;
+  }
+  /* Footer Section End */
+}
+
+@media screen and (max-width: 768px) {
+  /* Start Header SEction */
+  .background-header::before {
+    background-position: center bottom;
+    background-size: cover;
+  }
+  /* Start Header SEction */
+
+  /* Start Hero SEction */
+  .hero {
+    padding-bottom: 0;
+  }
+  /* End Hero SEction */
+
+  /* Derpartments Section Start*/
+  .derpartments-list {
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+  .derpartments-list .details p {
+    padding: 0 4.3rem;
+  }
+  /* Derpartments Section End*/
+
+  /* About Section Start*/
+  .about-imgbx img {
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+    height: auto;
+  }
+  .about_us-content {
+    padding-left: 0;
+  }
+  .about_us-content p {
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  /* About Section End*/
+
+  /* Our Doctors Section Start */
+  .doctors-heading p {
+    padding: 0 0rem 2rem;
+    text-align: justify;
+  }
+  .doctors_list .details .doctors-contact a {
+    padding: 0 0.2rem;
+  }
+  /* Our Doctors Section End */
+  /*Contact Section Start*/
+  .form-ctrl .input-group {
+    display: block;
+    width: 100%;
+  }
+  .form-ctrl .h-width:nth-child(1) {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .submit-btn {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  /*Contact Section End*/
+
+  /* Testimonial section Start */
+  .client .client-details p {
+    padding: 0 1rem;
+  }
+  /* Testimonial section Start */
+}
+
+@media screen and (max-width: 576px) {
+  /* Start Header SEction */
+  .background-header::before {
+    padding-bottom: 5rem;
+  }
+  /* Start Header SEction */
+
+  /* Start Nav SEction */
+  nav {
+    padding: 1rem 0;
+  }
+  .nav-active {
+    margin-bottom: 18rem;
+  }
+  /* End Nav SEction */
+
+  /* Start Hero SEction */
+  .hero {
+    padding-top: 0.5rem;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-top: 2.5rem;
+  }
+  /* End Hero SEction */
+
+  /* Derpartments Section End*/
+  .derpartments-lists {
+    margin: 2.5rem 0 1rem;
+  }
+  .derpartments-list .details p {
+    padding: 0;
+  }
+  /* Derpartments Section End*/
+
+  /* Our Doctors Section Start */
+  .doctors-lists {
+    justify-content: unset;
+  }
+  .doctors_list {
+    margin-top: 1.5rem;
+  }
+  .doctors_list .details .doctors-contact a {
+    padding: 0 0.5rem;
+  }
+  /* Our Doctors Section End */
+
+  /* Testimonial section Start */
+  .client .client-details h3 {
+    margin-bottom: 0.5rem;
+  }
+  .client .client-details p {
+    padding: 0;
+  }
+  .swiper2 .swiper-button-prev {
+    left: 43%;
+  }
+  .swiper2 .swiper-button-next {
+    left: 58%;
+  }
+  /* Testimonial section End */
+
+  /* Footer Section Start */
+  footer .container > div {
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  footer .container > div:nth-child(3) h3 {
+    margin-bottom: 0.5rem;
+  }
+  .footer-links .h-link,
+  .footer-links .f-link {
+    display: inline-block;
+  }
+  .footer-links a {
+    margin-right: 0.5rem;
+  }
+  /* Footer Section End */
+}
+
+@media screen and (max-width: 365px) {
+  /* Start Hero SEction */
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+  /* End Hero SEction */
+
+  /* About Section Start*/
+  .about_us-content h2 {
+    font-size: 1.8rem;
+  }
+  .about_us-content p {
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  /* About Section End*/
+
+  /* Our Doctors Section Start */
+  .doctors_list .details .doctors-contact {
+    width: 70%;
+    text-align: center;
+  }
+  /* Our Doctors Section End */
+
+  /* Testimonial section Start */
+  .swiper2 .swiper-button-prev {
+    left: 40%;
+  }
+  .swiper2 .swiper-button-next {
+    left: 60%;
+  }
+  /* Testimonial section End */
+
+  /* Footer Section Start */
+footer .container > div {
+    padding: 0 0.5rem;
+}
+  .footer-links .f-link {
+    margin: 0;
+  }
+  .footer-links .h-link,
+  .footer-links .f-link {
+    display: block;
+  }
+  .footer-links .f-link {
+    margin: 0.6rem 0;
+  }
+  /* Footer Section End */
+}
